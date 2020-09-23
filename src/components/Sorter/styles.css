@@ -1,0 +1,171 @@
+.custom-dialog .MuiPaper-root.MuiDialog-paper {
+  z-index: 0;
+  overflow: unset;
+  min-width: 350px;
+  min-height: 200px;
+  position: relative;
+  border-radius: 0 6px 6px 0;
+  background-color: #282727;
+}
+
+.custom-dialog .MuiPaper-root.MuiDialog-paper::before,
+.custom-dialog .MuiPaper-root.MuiDialog-paper::after {
+  width: 0;
+  z-index: 2;
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.custom-dialog .MuiPaper-root.MuiDialog-paper::before {
+  top: 0;
+  left: -6px;
+  height: 28%;
+  right: auto;
+  bottom: auto;
+  border-left: none;
+  border-radius: 6px 0 0 0;
+  border-right: 6px solid #282727;
+  border-bottom: 6px solid transparent;
+}
+
+.custom-dialog .MuiPaper-root.MuiDialog-paper::after {
+  bottom: 0;
+  top: auto;
+  left: -6px;
+  right: auto;
+  height: 42%;
+  border-left: none;
+  border-radius: 0 0 0 6px;
+  border-right: 6px solid #282727;
+  border-top: 6px solid transparent;
+}
+
+.custom-dialog .MuiPaper-root.MuiDialog-paper .dialog-bg {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  display: block;
+  position: absolute;
+
+  background: url("/images/bg_hash.png");
+  background-size: 7px;
+  background-repeat: repeat-x;
+  background-position: top left;
+  background-color: #282727;
+}
+
+.custom-dialog .dialog-title {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.custom-dialog .dialog-title h2 {
+  color: #9e4f60;
+  font-weight: 400;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.custom-dialog .dialog-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.custom-dialog .dialog-content .form-control {
+  min-width: 140px;
+}
+
+.custom-dialog .dialog-content .forms {
+  padding-bottom: 20px;
+}
+
+.custom-dialog .dialog-content .clear-button {
+  padding: 0;
+}
+
+.custom-dialog .dialog-content .clear-button .MuiButton-label {
+  color: #9e4f60;
+}
+
+.form-control + .form-control {
+  margin-left: 1rem;
+}
+
+.form-control label.MuiFormLabel-root {
+  color: #aaa;
+  font-weight: 400;
+}
+
+.form-control .MuiInputBase-root.MuiInput-root.MuiInput-underline::before {
+  border-bottom-color: #aaa;
+}
+
+.form-control .MuiInputBase-root.MuiInput-root.MuiInput-underline::after {
+  border-bottom-color: #9e4f60;
+}
+
+.form-control .MuiSvgIcon-root.MuiSelect-icon {
+  color: #aaa;
+}
+
+.form-control label.MuiFormLabel-root.Mui-focused {
+  color: #9e4f60;
+}
+
+.form-control .MuiSelect-select.MuiInput-input {
+  color: #aaa;
+}
+
+.custom-dialog .dialog-actions {
+  overflow: hidden;
+  position: relative;
+  padding: 0 1.5rem 0.5rem;
+}
+
+.custom-dialog .dialog-actions::after {
+  z-index: 1;
+  left: 20px;
+  width: 47px;
+  content: "";
+  height: 47px;
+  bottom: -12px;
+  opacity: 0.06;
+  display: block;
+  position: absolute;
+  transform: scaleY(-1);
+
+  background-image: url("/images/decal.png");
+  background-size: 300% 200%;
+}
+
+.dialog-actions button.MuiButtonBase-root .MuiButton-label {
+  color: #9e4f60;
+  font-weight: 400;
+}
+
+.sort-button.MuiButtonBase-root.MuiButton-root {
+  padding: 0;
+}
+
+.sort-button .MuiButton-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sort-button span {
+  color: #ddd;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.sort-button span .MuiSvgIcon-root {
+  font-size: 1.5rem;
+  padding-left: 0.5rem;
+}

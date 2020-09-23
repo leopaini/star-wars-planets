@@ -1,0 +1,34 @@
+.search-input.MuiPaper-root {
+  background-color: #343434;
+}
+
+.search-input.MuiPaper-root .input {
+  margin: 0;
+  height: 40px;
+  width: 150px;
+  margin-top: 2px;
+}
+
+.search-input .icon {
+  color: #fff;
+}
+
+.search-input.MuiPaper-root .input .MuiInputBase-root {
+  height: 100%;
+  color: #fff;
+}
+
+.search-input.MuiPaper-root .input .MuiInputBase-root::before,
+.search-input.MuiPaper-root .input .MuiInputBase-root::after {
+  display: none;
+}
+
+.search-input.MuiPaper-root .input .MuiIconButton-root {
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .search-input.MuiPaper-root .MuiAutocomplete-root {
+    max-width: 130px;
+  }
+}

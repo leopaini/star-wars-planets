@@ -1,0 +1,100 @@
+.navBar {
+  z-index: 0;
+  height: 100px;
+  position: relative;
+  background: #000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.navContent {
+  display: grid;
+  padding: 20px;
+  grid-template-columns: 1fr 140px 1fr;
+  grid-template-areas: ". logo search";
+}
+
+.backStars {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  margin: 0 auto;
+  max-width: 1280px;
+  position: absolute;
+  background: url("/images/stars.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.backStars::before {
+  content: "";
+  left: 0;
+  height: 100%;
+  width: 100px;
+  position: absolute;
+  background-image: linear-gradient(
+    to right,
+    #000 0%,
+    rgba(0, 0, 0, 0.8) 30%,
+    rgba(0, 0, 0, 0.15) 75%,
+    transparent 100%
+  );
+}
+
+.backStars::after {
+  content: "";
+  right: 0;
+  height: 100%;
+  width: 100px;
+  position: absolute;
+  background-image: linear-gradient(
+    to left,
+    #000 0%,
+    rgba(0, 0, 0, 0.7) 50%,
+    rgba(0, 0, 0, 0.15) 75%,
+    transparent 100%
+  );
+}
+
+.logo {
+  grid-area: logo;
+  height: 61px;
+  width: 140px;
+  display: block;
+  background: url("/images/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.search {
+  display: flex;
+  grid-area: search;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.searchInput {
+  height: 40px;
+  opacity: 0.7;
+  display: flex;
+  padding: 0 15px;
+  border-radius: 4px;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .navContent {
+    grid-template-columns: minmax(90px, 140px) 1fr;
+    grid-template-areas: "logo search";
+  }
+
+  .logo {
+    width: 100%;
+    background-position: center;
+  }
+
+  .search {
+    padding-left: 1em;
+  }
+}
