@@ -1,6 +1,6 @@
 import React from "react";
 import { IRouterProps } from "interfaces";
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 // Store Provider
 import { StoreProvider } from "../store";
@@ -21,9 +21,6 @@ const Router: React.FunctionComponent<IRouterProps> = () => {
           <Switch>
             <Route path="/planet/:id" component={PlanetInfo} />
             <Route exact path="/" component={Home} />
-            {/* <Route path="/*">
-              <Redirect to="/" />
-            </Route> */}
           </Switch>
         </ThemeProvider>
       </BrowserRouter>
